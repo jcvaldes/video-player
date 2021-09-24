@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="./css/index.css"> -->
-  <link rel="stylesheet" href="./css/styles.css">
-  <title>Video Player</title>
-</head>
-<body>
-  <h1>video Player</h1>
-  <button class="button" id="play"></button>
-  <button class="button" id="pause"></button>
-  <button class="button" id="backward"></button>
-  <button class="button" id="fordward"></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Video Player</title>
+  </head>
+  <body>
+    <h1>video Player</h1>
+    <button
+      class="button"
+      id="backward"
+      title="Retroceder 10 segundos"
+      aria-label="Retroceder 10 segundos"
+    ></button>
+    <button
+      class="button"
+      id="play"
+      title="Reproducir video"
+      aria-label="Reproducir video"
+    ></button>
+    <button
+      class="button"
+      id="pause"
+      title="Pausar video"
+      aria-label="Pausar video"
+    ></button>
+    <button
+      class="button"
+      id="fordward"
+      aria-label="Adelantar 10 segundos"
+    ></button>
 
-  <video src="./videos/matrix.mp4" width="200"  autoplay muted controls></video>
-</body>
+    <video
+      id="video"
+      src="./videos/matrix.mp4"
+      width="200"
+      poster="./images/poster.jpg"
+      muted
+      controls
+    ></video>
+
+    <script>
+      const $video = document.querySelector("video");
+      const $play = document.querySelector("#play");
+      const $pause = document.querySelector("#pause");
+
+      $play.addEventListener("click", handlePlay);
+      $pause.addEventListener("click", handlePause);
+
+      function handlePlay() {
+        $video.play();
+        $play.hidden = true;
+        $pause.hidden = false;
+      }
+      function handlePause() {
+        $video.pause();
+        $pause.hidden = true;
+        $play.hidden = false;
+      }
+    </script>
+  </body>
 </html>

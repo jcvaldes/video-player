@@ -1,4 +1,4 @@
-button {
+.button {
   /* border: 10px solid green; */
   /* para poner el ancho del elemento */
   /* inline-size: 60px; */
@@ -11,6 +11,13 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+}
+.button:active {
+  transform: scale(.9);
+  -webkit-transform: scale(.9);
+  -moz-transform: scale(.9);
+  -ms-transform: scale(.9);
+  -o-transform: scale(.9);
 }
 
 #play {
