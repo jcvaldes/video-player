@@ -16,38 +16,41 @@
   </head>
   <body>
     <h1>video Player</h1>
-    <button
-      class="button"
-      id="backward"
-      title="Retroceder 10 segundos"
-      aria-label="Retroceder 10 segundos"
-    ></button>
-    <button
-      class="button"
-      id="play"
-      title="Reproducir video"
-      aria-label="Reproducir video"
-    ></button>
-    <button
-      class="button"
-      id="pause"
-      title="Pausar video"
-      aria-label="Pausar video"
-    ></button>
-    <button
-      class="button"
-      id="fordward"
-      aria-label="Adelantar 10 segundos"
-    ></button>
+    <div class="wrapper">
+      <div class="player">
+        <button
+          class="button"
+          id="backward"
+          title="Retroceder 10 segundos"
+          aria-label="Retroceder 10 segundos"
+        ></button>
+        <button
+          class="button"
+          id="play"
+          title="Reproducir video"
+          aria-label="Reproducir video"
+        ></button>
+        <button
+          class="button"
+          id="pause"
+          title="Pausar video"
+          aria-label="Pausar video"
+        ></button>
+        <button
+          class="button"
+          id="fordward"
+          aria-label="Adelantar 10 segundos"
+        ></button>
 
-    <video
-      id="video"
-      src="./videos/matrix.mp4"
-      width="200"
-      poster="./images/poster.jpg"
-      muted
-      controls
-    ></video>
+        <video
+          id="video"
+          src="./videos/matrix.mp4"
+          poster="./images/poster.jpg"
+          muted
+          controls
+        ></video>
+      </div>
+    </div>
 
     <script>
       const $video = document.querySelector("video");

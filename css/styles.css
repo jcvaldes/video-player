@@ -3,3 +3,14 @@ body {
   background-color: #26B4BC;
   font-family: Arial, Helvetica, sans-serif;
 }
+.wrapper {
+  max-inline-size: 900px;
+  margin: auto;
+}
+.player video {
+  inline-size: 100%;
+  border: 10px solid red;
+  /* mala desicion hacerla en el elemento video por que seria 
+  responsabilidad de un contenedor y ese elemento se llama wrapper o contenedor */
+  /* max-inline-size: 900px; */
+}
